@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+body {background-color:#f2f2f2}
+.d-inline {
+  display: inline;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label-btn{
+  text-align: center;
+    border-radius: -1.5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    border-radius: .2rem;
+    margin: .25rem;
+}
+
+.filter-label{
+  margin-top: .5rem;
+  text-align: center;
+  margin-bottom: .25rem;
+}
+
+.bg-white{
+  background-color: #ffffff;
+}
+
+.m-bottom-5{
+  padding-bottom: 2rem;
+}
+
+.green{
+  background-color: green;
+}
+
+.light-green{
+  background-color: lightgreen;
+}
+
+.pr-1{
+  padding-right: .25rem;
+}
+
+.pl-2{
+  padding-left: .5rem;
+}
+
+/* For mobile phones: */
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  /*1024*/
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /*1440*/
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}

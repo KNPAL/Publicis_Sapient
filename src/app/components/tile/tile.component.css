@@ -1,0 +1,30 @@
+.tile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;;
+    border-radius: .15rem;
+    background-color: #fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);  
+    padding: 8px;  
+    width: 16.5rem;
+}
+
+.tile-body{
+    flex: 1 1 auto;
+    min-width: 1px;
+}
+
+.tile-title{
+    margin-bottom: .75rem;
+}
+
+.tile-img{
+    background-color: #f2f2f2;
+}
+
+.bottom-margin{
+    margin-bottom: .5rem;
+}
