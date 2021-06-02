@@ -12,7 +12,10 @@ export class AppComponent implements OnInit {
   selectedyear: string;
   isLaunch: string;
   isLanded: string;
-  yearArrayList = [{ value: '2006' }, { value: '2007' }, { value: '2008' }, { value: '2009' }, { value: '2010' }, { value: '2011' }, { value: '2012' }, { value: '2013' }, { value: '2014' }, { value: '2015' }, { value: '2016' }, { value: '2017' }, { value: '2018' }, { value: '2019' }, { value: '2020' }];
+  yearArrayList = [{ value: '2006' }, { value: '2007' }, { value: '2008' }, { value: '2009' },
+  { value: '2010' }, { value: '2011' }, { value: '2012' }, { value: '2013' }, { value: '2014' },
+  { value: '2015' }, { value: '2016' }, { value: '2017' }, { value: '2018' }, { value: '2019' },
+  { value: '2020' }];
   booleanArrayList = ['True', 'False'];
   constructor(private httpCommonService: HttpCommonService) { }
 
@@ -67,9 +70,10 @@ export class AppComponent implements OnInit {
         filterQueryParam += `${property}=${filterParam[property]}&`;
       }
     }
-    this.httpCommonService.get('https://api.spaceXdata.com/v3/launches?limit=100' + filterQueryParam.substring(0, filterQueryParam.length - 1)).subscribe((data) => {
-      this.projectList = data;
-    });
+    this.httpCommonService.get('https://api.spaceXdata.com/v3/launches?limit=100' + filterQueryParam.
+      substring(0, filterQueryParam.length - 1)).subscribe((data) => {
+        this.projectList = data;
+      });
   }
 
   setFilter() {
