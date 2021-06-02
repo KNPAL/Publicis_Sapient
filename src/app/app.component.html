@@ -1,16 +1,16 @@
 <div>
   <div class="row">
-    <div class="col-6">
+    <div class="col-6 col-s-6">
       <h1 class="heading-margin">
         Spacex Launch Programms
       </h1>
     </div>
    </div>
   <div class="row">
-    <div class="col-2" style="margin-top:.75rem">
+    <div class="col-2 col-s-4" style="margin-top:.75rem">
       <div class="row bg-white">
         <h3 class="heading-margin ml-1">Filter</h3>
-        <div class="col-12 filter-label">Launch Year<hr/></div>
+        <div class="col-12 col-s-12 filter-label">Launch Year<hr/></div>
         <ng-container *ngFor="let year of yearArrayList">
           <div (click)="onYearClick(year)" [ngClass]="selectedyear===year.value?'green':'light-green'" class="m-1 w-25 label-btn">
             <label>{{year.value}}</label>
@@ -18,7 +18,7 @@
         </ng-container>
       </div>
       <div class="row bg-white">
-        <div class="col-12 filter-label">Successful Launch<hr/></div>
+        <div class="col-12 col-s-12 filter-label">Successful Launch<hr/></div>
         <ng-container *ngFor="let item of booleanArrayList">
           <div (click)="filterSelection(item,'launch')" [ngClass]="isLaunch===item?'green':'light-green'" class="w-25 m-1 label-btn">
             <label>{{item}}</label>
@@ -26,7 +26,7 @@
         </ng-container>
       </div>
       <div class="row bg-white m-bottom-5">
-        <label class="col-12 filter-label">Successful Landing<hr/></label>
+        <label class="col-12 col-s-12 filter-label">Successful Landing<hr/></label>
         <ng-container *ngFor="let item of booleanArrayList">
           <div (click)="filterSelection(item,'land')" [ngClass]="isLanded===item?'green':'light-green'" class=" w-25 m-1 label-btn">
             <label>{{item}}</label>
@@ -34,9 +34,9 @@
         </ng-container>
       </div>
     </div>
-    <div class="col-10">
+    <div class="col-10 col-s-8">
       <div class="row">
-        <div *ngFor="let item of projectList" class="col-3">
+        <div *ngFor="let item of projectList" class="col-3 col-s-6">
           <app-tile [space]="item"></app-tile>
         </div>
       </div>
