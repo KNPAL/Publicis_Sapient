@@ -1,23 +1,16 @@
-<!-- <img src="../assets/Capture.PNG"> -->
-
-
 <div>
   <div class="row">
     <div class="col-6">
       <h1 class="heading-margin">
         Spacex Launch Programms
       </h1>
-
     </div>
-    <!-- <div class="col-6"> toggle</div> -->
-  </div>
+   </div>
   <div class="row">
     <div class="col-2" style="margin-top:.75rem">
       <div class="row bg-white">
-        <h3 class="heading-margin ml-1">Filter</h3><label class="pr-1 pl-2 heading-margin" (click)="filter()">Apply</label>
-        <label class="heading-margin" (click)="clearFilter()">clear</label>
+        <h3 class="heading-margin ml-1">Filter</h3>
         <div class="col-12 filter-label">Launch Year<hr/></div>
-        <!-- <hr/> -->
         <ng-container *ngFor="let year of yearArrayList">
           <div (click)="onYearClick(year)" [ngClass]="selectedyear===year.value?'green':'light-green'" class="m-1 w-25 label-btn">
             <label>{{year.value}}</label>

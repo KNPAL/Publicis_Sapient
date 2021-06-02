@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
   constructor(private httpCommonService: HttpCommonService) { }
 
   ngOnInit() {
-    this.getProjectList();
+    this.filter();
+    this.setFilter();
   }
 
   onYearClick(year) {
@@ -26,6 +27,8 @@ export class AppComponent implements OnInit {
     } else {
       this.selectedyear = year.value;
     }
+    sessionStorage.setItem('launch_year', this.selectedyear);
+    this.filter();
   }
 
   filterSelection(value, field) {
@@ -36,6 +39,7 @@ export class AppComponent implements OnInit {
         } else {
           this.isLanded = value;
         }
+        sessionStorage.setItem('land_success', this.isLanded);
         break;
       case 'launch':
         if (this.isLaunch === value) {
@@ -43,17 +47,19 @@ export class AppComponent implements OnInit {
         } else {
           this.isLaunch = value;
         }
+        sessionStorage.setItem('launch_success', this.isLaunch);
         break;
       default:
     }
+    this.filter();
   }
 
   filter() {
     let filterQueryParam = '&';
     const filterParam = {
-      launch_success: this.getBoolean(this.isLaunch),
-      land_success: this.getBoolean(this.isLanded),
-      launch_year: this.selectedyear
+      launch_success: this.getBoolean(sessionStorage.getItem('launch_success')),
+      land_success: this.getBoolean(sessionStorage.getItem('land_success')),
+      launch_year: sessionStorage.getItem('launch_year')
     };
 
     for (const property in filterParam) {
@@ -66,26 +72,25 @@ export class AppComponent implements OnInit {
     });
   }
 
-  clearFilter() {
-    this.selectedyear = '';
-    this.isLanded = '';
-    this.isLaunch = '';
-    this.getProjectList();
-  }
-
-  getProjectList() {
-    this.httpCommonService.get('https://api.spaceXdata.com/v3/launches?limit=100').subscribe((data) => {
-      this.projectList = data;
-    });
+  setFilter() {
+    if (!!sessionStorage.getItem('launch_success')) {
+      this.isLaunch = sessionStorage.getItem('launch_success');
+    }
+    if (!!sessionStorage.getItem('land_success')) {
+      this.isLanded = sessionStorage.getItem('land_success');
+    }
+    if (!!sessionStorage.getItem('launch_year')) {
+      this.selectedyear = sessionStorage.getItem('launch_year');
+    }
   }
 
   getBoolean(inputValue) {
     let retValue = '';
-    if (inputValue.toUpperCase() === 'TRUE') {
+    if (inputValue && inputValue.toUpperCase() === 'TRUE') {
       retValue = 'true';
     }
 
-    if (inputValue.toUpperCase() === 'FALSE') {
+    if (inputValue && inputValue.toUpperCase() === 'FALSE') {
       retValue = 'false';
     }
     return retValue;
