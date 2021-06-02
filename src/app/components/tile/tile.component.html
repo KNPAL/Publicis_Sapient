@@ -1,23 +1,39 @@
 <div class="tile">
     <div class="tile-body">
         <div>
-            <img class="tile-img"  [src]="space.links.mission_patch">
+            <img class="tile-img" [src]="space.links.mission_patch">
         </div>
         <div class="tile-title">
             <label class="tile-label label-color">{{space.mission_name}} #</label>
             <label class="tile-label label-color">{{space.flight_number}}</label>
         </div>
         <div class="bottom-margin">
-            <label class="tile-label">Mission Ids</label>
+            <label class="tile-label">Mission Ids:</label>
+            <ng-container *ngIf="space.mission_id.length>0;else NoMissionId">
+                <ul *ngFor="let id of space.mission_id">
+                    <li class="tile-value">{{id}}</li>
+                </ul>
+            </ng-container>
+            <ng-template #NoMissionId>
+                <label class="tile-value">NA</label>
+            </ng-template>
         </div>
         <div class="bottom-margin">
-            <label class="tile-label">Launch Year:</label><label class="tile-value">{{space.launch_year}}</label>
+            <label class="tile-label">Launch Year:</label>
+            <label class="tile-value">{{space.launch_year}}</label>
         </div>
         <div class="bottom-margin">
-            <label class="tile-label">Successful Launch:</label><label class="tile-value">{{space.launch_success}}</label>
+            <label class="tile-label">Successful Launch:</label>
+            <label class="tile-value">{{space.launch_success}}</label>
         </div>
         <div class="bottom-margin">
-            <label class="tile-label">Successful Landing:</label><label class="tile-value">{{space.launch_landing}}</label>
+            <label class="tile-label">Successful Landing:</label>
+            <ng-container *ngIf="space.rocket.first_stage.cores[0].land_success;else NoLandingData">
+                <label class="tile-value">{{space.rocket.first_stage.cores[0].land_success}}</label>
+            </ng-container>
+            <ng-template #NoLandingData>
+                <label class="tile-value">NA</label>
+            </ng-template>
         </div>
     </div>
 </div>
