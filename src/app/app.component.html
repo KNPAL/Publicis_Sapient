@@ -36,9 +36,15 @@
     </div>
     <div class="col-10 col-s-8">
       <div class="row">
-        <div *ngFor="let item of projectList" class="col-3 col-s-6">
-          <app-tile [space]="item"></app-tile>
-        </div>
+        <ng-container *ngIf="projectList.length>0;else NoProject">
+            <div *ngFor="let item of projectList" class="col-3 col-s-6">
+                <app-tile [space]="item"></app-tile>
+              </div>
+        </ng-container>
+        <ng-template class="col-10 col-s-8" #NoProject>
+           <h1 style="margin-bottom:5rem">No Programm Avaliable</h1> 
+        </ng-template>
+        
       </div>
     </div>
   </div>

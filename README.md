@@ -11,4 +11,7 @@
 `lint` has been used for code quality to check 'ng lint' can run.
 
 
+## Deploy
+
+Project is deployed on firebase which can be accesable with url `https://publicissapientassignment.web.app/`
 
