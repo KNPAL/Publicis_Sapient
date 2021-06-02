@@ -8,7 +8,7 @@
 
 ## Code quality 
 
-`lint` has been used for code quality to check 'ng lint' can run.
+`lint` has been used for code quality to check 'ng lint' can be run.
 
 
 
