@@ -1,83 +1,91 @@
-.heading-margin{
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+.heading-margin {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
 }
 
-hr{
-    width: 50%;
-    color: #CDCBC9;
+hr {
+  width: 50%;
+  color: #CDCBC9;
 }
-
 
 .float-right {
-    float: right;
-  }
-  
-  .float-left {
-    float: left;
-  }
-  
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .label-btn{
-    text-align: center;
-      border-radius: -1.5rem;
-      padding-top: .25rem;
-      padding-bottom: .25rem;
-      border-radius: .2rem;
-      margin: .25rem;
-  }
-  
-  .filter-label{
-    margin-top: .5rem;
-    text-align: center;
-    margin-bottom: .25rem;
-  }
-  
-  .bg-white{
-    background-color: #ffffff;
-  }
-  
-  .m-bottom-5{
-    padding-bottom: 2rem;
-  }
-  
-  .green{
-    background-color: #7CBA01;
-  }
-  
-  .light-green{
-    background-color: #C5E09B;
-  }
+  float: right;
+}
 
-  .d-inline {
-    display: inline;
-  }
+.float-left {
+  float: left;
+}
 
-  
-.pr-1{
-    padding-right: 1.25rem;
-  }
-  
-  .pl-2{
-    padding-left: 1.5rem;
-  }
-  
-  .w-25{
-    width: 25%;
-  }
-  
-  .m-1{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-  }
-  
-  .ml-1{
-    margin-left: 1rem;
-  }
-  
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label-btn {
+  text-align: center;
+  border-radius: -1.5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border-radius: .2rem;
+  margin: .25rem;
+}
+
+.filter-label {
+  margin-top: .5rem;
+  text-align: center;
+  margin-bottom: .25rem;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.m-bottom-5 {
+  padding-bottom: 2rem;
+}
+
+.green {
+  background-color: #7CBA01;
+}
+
+.light-green {
+  background-color: #C5E09B;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.pr-1 {
+  padding-right: 1.25rem;
+}
+
+.pl-2 {
+  padding-left: 1.5rem;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.m-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
