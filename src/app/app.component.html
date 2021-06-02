@@ -1,30 +1,41 @@
+<!-- <img src="../assets/Capture.PNG"> -->
+
+
 <div>
   <div class="row">
-    <div class="col-6">Spacex launch projects</div>
-    <div class="col-6"> toggle</div>
+    <div class="col-6">
+      <h1 class="heading-margin">
+        Spacex Launch Programms
+      </h1>
+
+    </div>
+    <!-- <div class="col-6"> toggle</div> -->
   </div>
   <div class="row">
-    <div class="col-2">
+    <div class="col-2" style="margin-top:.75rem">
       <div class="row bg-white">
-        <div class="col-12 ">Launch Year <label class="pr-1 pl-2" (click)="filter()">Apply</label> <label>clear</label></div>
+        <h3 class="heading-margin ml-1">Filter</h3><label class="pr-1 pl-2 heading-margin" (click)="filter()">Apply</label>
+        <label class="heading-margin" (click)="clearFilter()">clear</label>
+        <div class="col-12 filter-label">Launch Year<hr/></div>
+        <!-- <hr/> -->
         <ng-container *ngFor="let year of yearArrayList">
-          <div (click)="onYearClick(year)" [ngClass]="selectedyear===year.value?'green':'light-green'" class="col-4 label-btn">
+          <div (click)="onYearClick(year)" [ngClass]="selectedyear===year.value?'green':'light-green'" class="m-1 w-25 label-btn">
             <label>{{year.value}}</label>
           </div>
         </ng-container>
       </div>
       <div class="row bg-white">
-        <div class="col-8 filter-label">Successful Launch</div>
+        <div class="col-12 filter-label">Successful Launch<hr/></div>
         <ng-container *ngFor="let item of booleanArrayList">
-          <div (click)="filterSelection(item,'launch')" [ngClass]="isLaunch===item?'green':'light-green'" class="col-4 label-btn">
+          <div (click)="filterSelection(item,'launch')" [ngClass]="isLaunch===item?'green':'light-green'" class="w-25 m-1 label-btn">
             <label>{{item}}</label>
           </div>
         </ng-container>
       </div>
       <div class="row bg-white m-bottom-5">
-        <label class="col-8 filter-label">Successful Landing</label>
+        <label class="col-12 filter-label">Successful Landing<hr/></label>
         <ng-container *ngFor="let item of booleanArrayList">
-          <div (click)="filterSelection(item,'land')" [ngClass]="isLanded===item?'green':'light-green'" class="col-4 label-btn">
+          <div (click)="filterSelection(item,'land')" [ngClass]="isLanded===item?'green':'light-green'" class=" w-25 m-1 label-btn">
             <label>{{item}}</label>
           </div>
         </ng-container>

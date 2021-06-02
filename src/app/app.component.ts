@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
     } else {
       this.selectedyear = year.value;
     }
-    console.log(this.selectedyear);
   }
 
   filterSelection(value, field) {

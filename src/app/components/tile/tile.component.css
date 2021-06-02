@@ -9,7 +9,8 @@
     background-clip:border-box;
     border:1px solid rgba(0,0,0,.125);  
     padding: 8px;  
-    width: 16.5rem;
+    width: 14rem;
+    margin: .75rem;
 }
 
 .tile-body{
@@ -27,4 +28,23 @@
 
 .bottom-margin{
     margin-bottom: .5rem;
+}
+
+img{
+    width: 210px;
+    height: 200px;
+    margin: .25rem;
+}
+
+.tile-label{
+    font-weight: bold;
+}
+
+.label-color{
+    color:#444B8F;
+    font-weight: 800;
+}
+
+.tile-value{
+    color: #6c6faf
 }
